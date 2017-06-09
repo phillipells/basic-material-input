@@ -1,0 +1,85 @@
+input.create-campaign-input[type="text"] {
+  font-size:18px;
+  padding:10px 10px 2px 0px;
+  display:inline-block;
+  width:100%;
+  border:none;
+  border-bottom:2px solid rgb(226, 226, 226);
+  background: transparent;
+}
+
+input.create-campaign-input:focus {
+    outline:none;
+}
+
+.group {
+  position:relative;
+  margin-top:10px;
+}
+
+/* LABEL */
+.create-campaign-label {
+  color: rgb(92, 91, 92);
+  font-size:14px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* ACTIVE STATE  */
+input.create-campaign-input:focus ~ label.create-campaign-label, input.create-campaign-input:valid ~ label.create-campaign-label, input.create-campaign-input:valid ~ label, input.create-campaign-input[disabled] ~ label {
+  top:-5px;
+  font-size:12px;
+  color: #999;
+}
+
+/* ACTIVE STATE */
+input.create-campaign-input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+.focus-text {
+    top:-10px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* HIGHLIGHTER */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:90%;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+.padding-right-25 {
+    padding-right: 25px;
+}
+
+* {
+    font-family: Arial, sans-serif;
+}
